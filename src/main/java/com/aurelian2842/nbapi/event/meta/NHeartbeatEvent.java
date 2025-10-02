@@ -1,0 +1,21 @@
+package com.aurelian2842.nbapi.event.meta;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
+@EqualsAndHashCode(callSuper = false)
+public class NHeartbeatEvent extends NMetaEvent {
+    private final boolean good;
+    private final boolean online;
+    private final long interval;
+
+    public NHeartbeatEvent(long time, long selfId, boolean good, boolean online, long interval) {
+        super(time, selfId, MetaEventType.HEARTBEAT);
+        this.good = good;
+        this.online = online;
+        this.interval = interval;
+    }
+}
