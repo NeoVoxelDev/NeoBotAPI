@@ -8,10 +8,10 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class NMetaEvent extends NEvent {
+public class MetaEvent extends NEvent {
     private final MetaEventType metaEventType;
 
-    protected NMetaEvent(long time, long selfId, MetaEventType metaEventType) {
+    protected MetaEvent(long time, long selfId, MetaEventType metaEventType) {
         super(time, selfId);
         this.metaEventType = metaEventType;
     }

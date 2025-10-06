@@ -5,12 +5,12 @@ import com.aurelian2842.nbapi.listener.NBotListener;
 import com.aurelian2842.nbapi.listener.NBotEventHandler;
 
 import java.lang.reflect.Method;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NBotReflectionUtil {
-    public static Set<NBotMethod> getEventMethods(NBotListener instance) {
-        Set<NBotMethod> set = new HashSet<>();
+    public static List<NBotMethod> getEventMethods(NBotListener instance) {
+        List<NBotMethod> set = new ArrayList<>();
         for (Method method : instance.getClass().getDeclaredMethods()) {
             if (!method.isAnnotationPresent(NBotEventHandler.class)) {
                 continue;

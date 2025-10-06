@@ -8,10 +8,10 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class NNoticeEvent extends NEvent {
+public class NoticeEvent extends NEvent {
     private final NoticeType noticeType;
 
-    protected NNoticeEvent(long time, long selfId, NoticeType noticeType) {
+    protected NoticeEvent(long time, long selfId, NoticeType noticeType) {
         super(time, selfId);
         this.noticeType = noticeType;
     }

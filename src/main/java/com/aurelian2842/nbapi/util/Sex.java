@@ -1,4 +1,4 @@
-package com.aurelian2842.nbapi.event;
+package com.aurelian2842.nbapi.util;
 
 public enum Sex {
     MALE,

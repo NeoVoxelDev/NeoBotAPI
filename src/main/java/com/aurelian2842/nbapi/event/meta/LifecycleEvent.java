@@ -7,10 +7,10 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class NLifecycleEvent extends NMetaEvent {
+public class LifecycleEvent extends MetaEvent {
     private final boolean connected;
 
-    public NLifecycleEvent(long time, long selfId, boolean connected) {
+    public LifecycleEvent(long time, long selfId, boolean connected) {
         super(time, selfId, MetaEventType.LIFECYCLE);
         this.connected = connected;
     }
