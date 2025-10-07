@@ -22,4 +22,6 @@ public interface NBotClient {
     void action(Action action);
 
     <T> void action(GetAction<T> action, Consumer<T> consumer);
+
+    boolean isConnected();
 }
