@@ -35,24 +35,22 @@ public class OBWSClient extends WebSocketClient implements NBotClient {
 
     private final Map<GetAction<?>, Consumer<?>> consumerMap = new HashMap<>();
 
-    private final String address;
-    private final int port;
-    private final @Nullable String accessToken;
-
     private boolean isConnected = false;
 
     public OBWSClient(String address, int port) throws URISyntaxException {
         super(new URI("ws://" + address + ":" + port));
-        this.address = address;
-        this.port = port;
-        this.accessToken = null;
     }
 
     public OBWSClient(String address, int port, @Nullable String accessToken) throws URISyntaxException {
         super(new URI("ws://" + address + ":" + port), NBotMapUtil.of("Authorization", "Bearer " + accessToken));
-        this.address = address;
-        this.port = port;
-        this.accessToken = accessToken;
+    }
+
+    public OBWSClient(URI url, @Nullable String accessToken) {
+        super(url, NBotMapUtil.of("Authorization", "Bearer " + accessToken));
+    }
+
+    public OBWSClient(URI url) {
+        super(url);
     }
 
     @Override
