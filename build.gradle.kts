@@ -6,8 +6,8 @@ plugins {
     id("org.jreleaser") version "1.20.0"
 }
 
-group = "com.aurelian2842.nbapi"
-version = "1.0.1"
+group = "dev.neovoxel.nbapi"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -43,7 +43,7 @@ publishing {
             pom {
                 name = project.name
                 description = "A library used to link to some bot client"
-                url = "https://github.com/Aurelian2842/NeoBotAPI"
+                url = "https://github.com/NeoVoxelDev/NeoBotAPI"
                 inceptionYear = "2025"
                 licenses {
                     license {
@@ -58,9 +58,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:https://github.com/Aurelian2842/NeoBotAPI.git"
-                    developerConnection = "scm:git:ssh://github.com/Aurelian2842/NeoBotAPI.git"
-                    url = "http://github.com/Aurelian2842/NeoBotAPI"
+                    connection = "scm:git:https://github.com/NeoVoxelDev/NeoBotAPI.git"
+                    developerConnection = "scm:git:ssh://github.com/NeoVoxelDev/NeoBotAPI.git"
+                    url = "http://github.com/NeoVoxelDev/NeoBotAPI"
                 }
             }
         }
