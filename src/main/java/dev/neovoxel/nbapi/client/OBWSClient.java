@@ -95,6 +95,7 @@ public class OBWSClient extends WebSocketClient implements NBotClient {
 
     @Override
     public void onError(Exception e) {
+        logger.error("There's a error occurred in WebsocketClient", e);
         isConnected = false;
     }
 
