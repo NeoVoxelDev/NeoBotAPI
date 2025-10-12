@@ -22,13 +22,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 
 @Getter
 @ToString
 @EqualsAndHashCode(callSuper = false)
 public class OBWSClient extends WebSocketClient implements NBotClient {
-
     private static final Logger logger = LoggerFactory.getLogger(OBWSClient.class);
 
     private final List<NBotMethod> methods = new ArrayList<>();
@@ -116,7 +116,7 @@ public class OBWSClient extends WebSocketClient implements NBotClient {
 
     @Override
     public boolean hasListener(NBotListener listener) {
-        return false;
+        return methods.stream().map(NBotMethod::getEventClass).collect(Collectors.toList()).contains(listener.getClass());
     }
 
     @Override
