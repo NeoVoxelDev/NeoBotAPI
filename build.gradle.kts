@@ -1,4 +1,5 @@
 import org.jreleaser.model.Active
+import org.jreleaser.model.Signing.Mode
 
 plugins {
     id("java")
@@ -81,6 +82,7 @@ jreleaser {
     signing {
         active = Active.ALWAYS
         armored = true
+        mode = Mode.MEMORY
     }
     deploy {
         maven {
