@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "dev.neovoxel.nbapi"
-version = "1.2.3"
+version = "1.3.0"
 
 repositories {
     mavenCentral()
@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     implementation("org.java-websocket:Java-WebSocket:1.6.0")
+    implementation("org.apache.httpcomponents:httpclient:4.5.14")
     implementation("org.json:json:20250517")
     implementation("org.slf4j:slf4j-api:2.0.17")
 

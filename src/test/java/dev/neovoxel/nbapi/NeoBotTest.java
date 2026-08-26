@@ -6,9 +6,11 @@ import dev.neovoxel.nbapi.client.OBWSClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
 import java.net.URISyntaxException;
 
+@Disabled("Integration tests require a OneBot 11 websocket server on 127.0.0.1:3001")
 public class NeoBotTest {
     @Test
     public void actionTest() throws URISyntaxException, InterruptedException {
