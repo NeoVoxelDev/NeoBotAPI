@@ -39,18 +39,22 @@ public class OBWSClient extends WebSocketClient implements NBotClient {
 
     public OBWSClient(String address, int port) throws URISyntaxException {
         super(new URI("ws://" + address + ":" + port));
+        setConnectionLostTimeout(30);
     }
 
     public OBWSClient(String address, int port, @Nullable String accessToken) throws URISyntaxException {
         super(new URI("ws://" + address + ":" + port), NBotMapUtil.of("Authorization", "Bearer " + accessToken));
+        setConnectionLostTimeout(30);
     }
 
     public OBWSClient(URI url, @Nullable String accessToken) {
         super(url, NBotMapUtil.of("Authorization", "Bearer " + accessToken));
+        setConnectionLostTimeout(30);
     }
 
     public OBWSClient(URI url) {
         super(url);
+        setConnectionLostTimeout(30);
     }
 
     @Override
